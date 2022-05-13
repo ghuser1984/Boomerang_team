@@ -2,9 +2,9 @@
 
 class Hero {
   constructor({ position, weapon }) {
-    this.skin = '🧙🏼‍♂️'; // можете использовать любые emoji '💃'
+    this.skin = '💃'; // можете использовать любые emoji '💃'
     this.weapon = weapon;
-    this.position = position;
+    this.position = 0;
   }
 
   moveLeft() {

@@ -19,8 +19,7 @@
     "eslint-plugin-import": "^2.26.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "npm run"
+
   },
   "repository": {
     "type": "git",

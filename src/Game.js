@@ -2,18 +2,21 @@
 // Или можно не импортировать,
 // а передавать все нужные объекты прямо из run.js при инициализации new Game().
 
+const readlineSync = require('readline-sync');
 const Hero = require('./game-models/Hero');
 const Enemy = require('./game-models/Enemy');
-// const Boomerang = require('./game-models/Boomerang');
+const Boomerang = require('./game-models/Boomerang');
 const View = require('./View');
 
 // Основной класс игры.
 // Тут будут все настройки, проверки, запуск.
 
+const weapon = new Boomerang();
+
 class Game {
   constructor({ trackLength }) {
     this.trackLength = trackLength;
-    this.hero = new Hero(); // Герою можно аргументом передать бумеранг.
+    this.hero = new Hero(weapon); // Герою можно аргументом передать бумеранг.
     this.enemy = new Enemy();
     this.view = new View();
     this.track = [];

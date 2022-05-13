@@ -9,11 +9,15 @@ module.exports = {
       },
       score: {
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
       },
-      userid: {
+      userId: {
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
+        reference: {
+          module: 'Users',
+          key: 'id',
+        },
       },
       createdAt: {
         allowNull: false,

@@ -1,5 +1,3 @@
-const { DataTypes } = require('sequelize/types');
-
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Users', {
@@ -11,8 +9,9 @@ module.exports = {
       },
       name: {
         allowNull: false,
-        type: DataTypes.TEXT,
+        type: Sequelize.TEXT,
       },
+      
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

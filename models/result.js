@@ -1,19 +1,20 @@
 const {
   Model,
 } = require('sequelize');
+// const { FOREIGNKEYS } = require('sequelize/types/lib/query-types');
 
 module.exports = (sequelize, DataTypes) => {
-  class Results extends Model {
+  class Result extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-      // define association here
+    static associate({ User }) {
+      Result.User = User.belongsTo(User, { foreignKey: 'userId' });
     }
   }
-  Results.init({
+  Result.init({
     score: {
       allowNull: false,
       type: DataTypes.INTEGER,
@@ -24,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     sequelize,
-    modelName: 'Results',
+    modelName: 'Result',
   });
-  return Results;
+  return Result;
 };

@@ -9,19 +9,19 @@ module.exports = {
       },
       name: {
         allowNull: false,
-        type: DataTypes.TEXT,
+        type: Sequelize.TEXT,
       },
       weapon: {
         allowNull: false,
-        type: DataTypes.TEXT,
+        type: Sequelize.TEXT,
       },
       agility: {
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
       },
       dexterity: {
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,

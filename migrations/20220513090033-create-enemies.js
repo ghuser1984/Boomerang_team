@@ -1,5 +1,3 @@
-const { DataTypes } = require('sequelize/types');
-
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Enemies', {
@@ -11,23 +9,23 @@ module.exports = {
       },
       name: {
         allowNull: false,
-        type: DataTypes.TEXT,
+        type: Sequelize.TEXT,
       },
       agility: {
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
       },
       vitality: {
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
       },
       weapon: {
         allowNull: false,
-        type: DataTypes.TEXT,
+        type: Sequelize.TEXT,
       },
       points: {
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,

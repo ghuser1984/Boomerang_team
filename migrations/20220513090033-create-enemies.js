@@ -21,7 +21,7 @@ module.exports = {
       },
       weapon: {
         allowNull: false,
-        type: Sequelize.TEXT,
+        type: Sequelize.INTEGER,
       },
       points: {
         allowNull: false,

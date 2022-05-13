@@ -13,7 +13,7 @@ module.exports = {
       },
       weapon: {
         allowNull: false,
-        type: Sequelize.TEXT,
+        type: Sequelize.INTEGER,
       },
       agility: {
         allowNull: false,

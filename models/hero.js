@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     weapon: {
       allowNull: false,
-      type: DataTypes.TEXT,
+      type: DataTypes.INTEGER,
     },
     agility: {
       allowNull: false,

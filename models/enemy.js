@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     weapon: {
       allowNull: false,
-      type: DataTypes.TEXT,
+      type: DataTypes.INTEGER,
     },
     points: {
       allowNull: false,

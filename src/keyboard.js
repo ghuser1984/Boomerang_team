@@ -3,17 +3,16 @@
 // Главное не используй всё вместе!
 
 const keypress = require('keypress');
+const Hero = require('./game-models/Hero');
 
 // Управление.
 // Настроим соответствия нажатий на клавиши и действий в игре.
 
 const keyboard = {
-  q: () => console.log('q'),
-  w: () => console.log('w'),
-  e: () => console.log('e'),
-  r: () => console.log('r'),
-  t: () => console.log('t'),
-  y: () => console.log('y'),
+  w: () => console.log('moving hero up'),
+  a: () => console.log('moving hero left'),
+  s: () => console.log('moving hero down'),
+  d: () => console.log('moving hero right'),
 };
 
 // Какая-то функция.
@@ -32,7 +31,9 @@ function runInteractiveConsole() {
       }
     }
   });
-  process.stdin.setRawMode(true);
+  if (process.stdin.isTTY) {
+    process.stdin.setRawMode(true);
+  }
 }
 
 // Давай попробуем запустить этот скрипт!

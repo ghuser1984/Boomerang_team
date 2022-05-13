@@ -1,8 +1,9 @@
 // Наш герой.
 
 class Hero {
-  constructor({ position }) {
+  constructor({ position, weapon }) {
     this.skin = '🧙🏼‍♂️'; // можете использовать любые emoji '💃'
+    this.weapon = weapon;
     this.position = position;
   }
 
@@ -18,7 +19,7 @@ class Hero {
 
   attack() {
     // Атакуем.
-    this.boomerang.fly();
+    this.weapon.fly();
   }
 
   die() {

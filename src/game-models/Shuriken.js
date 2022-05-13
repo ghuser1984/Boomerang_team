@@ -3,7 +3,7 @@ const Weapon = require('./Weapon');
 class Shuriken extends Weapon {
   constructor() {
     super();
-    this.skin = '#';
+    this.skin = '🌀';
     this.position = 0;
   }
 }
